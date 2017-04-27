@@ -1,0 +1,15 @@
+{
+    "devtools_port": 9090,
+    "startup_app": {
+        "name": "ag-grid-stocks-detail",
+        "url": "http://localhost:8000/examples/stocks-detail-app/index.html",
+        "uuid": "ag-grid-stocks-detail",
+        "applicationIcon": "http://localhost:8090/favicon.ico",
+        "autoShow": true
+    },
+    "runtime": {
+        "arguments": "",
+        "version": "beta"
+    },
+    "shortcut": {}
+}

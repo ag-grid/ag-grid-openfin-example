@@ -1,0 +1,14 @@
+{
+    "devtools_port": 9090,
+    "startup_app": {
+        "name": "ag-grid-rich-grid",
+        "url": "http://localhost:8000/examples/rich-grid/index.html",
+        "uuid": "ag-grid-rich-grid",
+        "autoShow": true
+    },
+    "runtime": {
+        "arguments": "",
+        "version": "beta"
+    },
+    "shortcut": {}
+}

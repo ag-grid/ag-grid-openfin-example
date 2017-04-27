@@ -1,0 +1,24 @@
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ag-grid/9.1.0/ag-grid.min.js"></script>
+    <script src="exampleStocksMaster.js"></script>
+</head>
+<body>
+<div style="margin-bottom: 10px">
+    Time Series Graph: <span id="detailStatus">Not Available.</span>
+    <span style="float: right">
+    Metric:
+    <select onchange="metricChanged(this.value)">
+        Open,High,Low,Close,Volume
+        <option>Open</option>
+        <option>High</option>
+        <option>Low</option>
+        <option selected>Close</option>
+        <option>Volume</option>
+    </select>
+
+    </span>
+</div>
+    <div id="myGrid" style="height: 250px" class="ag-blue"></div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+    "devtools_port": 9090,
+    "startup_app": {
+        "name": "ag-grid-simple",
+        "url": "http://localhost:8000/examples/simple-grid/index.html",
+        "uuid": "ag-grid-simple",
+        "autoShow": true
+    },
+    "runtime": {
+        "arguments": "",
+        "version": "beta"
+    },
+    "shortcut": {}
+}

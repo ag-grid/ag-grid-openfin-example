@@ -1,0 +1,14 @@
+{
+    "devtools_port": 9090,
+    "startup_app": {
+        "name": "ag-grid-master",
+        "url": "http://localhost:8000/examples/masterdetail-master-app/index.html",
+        "uuid": "ag-grid-master",
+        "autoShow": true
+    },
+    "runtime": {
+        "arguments": "",
+        "version": "beta"
+    },
+    "shortcut": {}
+}
