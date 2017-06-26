@@ -12,7 +12,9 @@
     "masterdetail-detail": "openfin --launch --config public/app-masterdetail-detail.json",
 
     "stocks-master": "openfin --launch --config public/app-stocks-master.json",
-    "stocks-detail": "openfin --launch --config public/app-stocks-detail.json"
+    "stocks-detail": "openfin --launch --config public/app-stocks-detail.json",
+
+    "trader-dashboard": "openfin --launch --config public/app-trader-dashboard.json"
   },
   "devDependencies": {
     "@types/openfin": "16.0.x",

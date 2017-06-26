@@ -17,6 +17,7 @@ Then depending on the example you will need to open one or two more terminals:
 | npm run masterdetail-master-single |                             |
 | npm run masterdetail-master        | npm run masterdetail-detail |
 | npm run stocks-master              | npm run stocks-detail       |
+| npm run trader-dashboard           |                             |
 
 #Included Examples:
 
