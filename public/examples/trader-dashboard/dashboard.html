@@ -98,85 +98,116 @@
     <script type="text/javascript" src="./components/FxQuoteMatrix.js" charset="utf-8"></script>
     <script type="text/javascript" src="./components/TopMoversGrid.js" charset="utf-8"></script>
     <script type="text/javascript" src="./dashboard.js" charset="utf-8"></script>
+
+    <style>
+        .panel-container {
+            width:1225px;
+            height:415px;
+        }
+        .left-side {
+            width:auto;
+            height:415px;
+            overflow:hidden;
+        }
+        .right-side {
+            height:200px;
+            width:425px;
+            padding-left: 25px;
+            float:right;
+        }
+
+        *[draggable=true] {
+            -moz-user-select:none;
+            -khtml-user-drag: element;
+            -webkit-user-drag: element;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+            cursor: move;
+        }
+    </style>
 </head>
 
-<body>
-<div style="margin-top: 10px; margin-bottom: 10px; width: 1225px">
-    <div>
-        <div style="float: left">
-            <div id="priceChangesGrid" style="height: 415px; width: 800px" class="ag-fresh"></div>
-        </div>
-        <div style="float: left;padding-left:25px">
-            <div>
+<body class="dropzone">
+<div style="margin-top: 10px; margin-bottom: 10px; width: 1235px">
+    <!-- Top Panel -->
+    <div class="panel-container">
+        <!-- Detail Panel/Graph -->
+        <div id="detailPanel">
+            <div draggable="true" class="right-side">
+                <div>
                 <span id="deltaPanelPrice"
                       style="font-size: 2.6em; font-weight: bold;margin-right: 10px"></span>
-                <div style="display: inline-block">
+                    <div style="display: inline-block">
                     <span style="font-weight: normal; font-size: 1.8em; vertical-align: bottom">
                         <span id="deltaPanelSwing"></span>
                         <span id="deltaPctPanelSwing"></span>
                     </span>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <span id="timestamp"></span>
-                    <div style="font-size: 11px; color: #6F6F6F">
-                        <span id="exchangeName"></span>
-                        <div>Currency in USD</div>
                     </div>
                 </div>
+                <div>
+                    <div>
+                        <span id="timestamp"></span>
+                        <div style="font-size: 11px; color: #6F6F6F">
+                            <span id="exchangeName"></span>
+                            <div>Currency in USD</div>
+                        </div>
+                    </div>
+                </div>
+                <div style="font-size: 13px">
+                    <table style="display: inline-block;vertical-align: top;border-collapse: collapse">
+                        <tbody>
+                        <tr>
+                            <td style="color: #666">Range</td>
+                            <td id="range" style="text-align: right">{this.props.tickerSummary.range}</td>
+                        </tr>
+                        <tr>
+                            <td style="color: #666">52 week</td>
+                            <td id="fiftyTwoWeek" style="text-align: right">
+                                {this.props.tickerSummary.fiftyTwoWeek}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="color: #666">Open</td>
+                            <td id="open" style="text-align: right">{this.props.tickerSummary.open}</td>
+                        </tr>
+                        <tr>
+                            <td style="color: #666">Vol / Avg.</td>
+                            <td id="vol" style="text-align: right">
+                                {this.props.tickerSummary.vol}/{this.props.tickerSummary.avg}
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table style="display: inline-block;vertical-align: top;border-collapse: collapse">
+                        <tbody>
+                        <tr>
+                            <td style="color: #666">Div/yield</td>
+                            <td id="dividendYield" style="text-align: right">
+                                {this.props.tickerSummary.dividend}/{this.props.tickerSummary.yld}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="color: #666">EPS</td>
+                            <td id="eps" style="text-align: right">{this.props.tickerSummary.eps}</td>
+                        </tr>
+                        <tr>
+                            <td style="color: #666">Shares</td>
+                            <td id="shares" style="text-align: right">{this.props.tickerSummary.shares}</td>
+                        </tr>
+                        <tr>
+                            <td style="color: #666">Market Cap</td>
+                            <td id="marketCap" style="text-align: right">{this.props.tickerSummary.marketCap}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="historyGraph" style="margin-top: 5px"></div>
             </div>
-            <div style="font-size: 13px">
-                <table style="display: inline-block;vertical-align: top;border-collapse: collapse">
-                    <tbody>
-                    <tr>
-                        <td style="color: #666">Range</td>
-                        <td id="range" style="text-align: right">{this.props.tickerSummary.range}</td>
-                    </tr>
-                    <tr>
-                        <td style="color: #666">52 week</td>
-                        <td id="fiftyTwoWeek" style="text-align: right">
-                            {this.props.tickerSummary.fiftyTwoWeek}
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="color: #666">Open</td>
-                        <td id="open" style="text-align: right">{this.props.tickerSummary.open}</td>
-                    </tr>
-                    <tr>
-                        <td style="color: #666">Vol / Avg.</td>
-                        <td id="vol" style="text-align: right">
-                            {this.props.tickerSummary.vol}/{this.props.tickerSummary.avg}
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-                <table style="display: inline-block;vertical-align: top;border-collapse: collapse">
-                    <tbody>
-                    <tr>
-                        <td style="color: #666">Div/yield</td>
-                        <td id="dividendYield" style="text-align: right">
-                            {this.props.tickerSummary.dividend}/{this.props.tickerSummary.yld}
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="color: #666">EPS</td>
-                        <td id="eps" style="text-align: right">{this.props.tickerSummary.eps}</td>
-                    </tr>
-                    <tr>
-                        <td style="color: #666">Shares</td>
-                        <td id="shares" style="text-align: right">{this.props.tickerSummary.shares}</td>
-                    </tr>
-                    <tr>
-                        <td style="color: #666">Market Cap</td>
-                        <td id="marketCap" style="text-align: right">{this.props.tickerSummary.marketCap}</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div id="historyGraph" style="margin-top: 5px"></div>
         </div>
+        <!-- Prince Changes Grid -->
+        <div id="priceChangesGrid" class="ag-fresh left-side"></div>
     </div>
+    <!-- Bottom Panel -->
     <div style="width: 100%; clear: both; padding-top: 25px">
         <div>
             <div style="float: left; margin-right: 25px">

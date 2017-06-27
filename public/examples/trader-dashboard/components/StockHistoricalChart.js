@@ -68,8 +68,8 @@ StockHistoricalChart.prototype.renderGraph = function (historicalData) {
         .attr("transform", "translate(0," + (this.renderingHeight + 20 ) + ")")
         .call(d3.axisBottom(scale).tickFormat(d3.timeFormat("%Y-%m-%d")))
         .selectAll("text")
-        .attr("y", 0)
-        .attr("x", 6)
+        .attr("y", 1)
+        .attr("x", 5)
         .attr("dy", ".35em")
         .attr("transform", "rotate(55)")
         .style("text-anchor", "start");

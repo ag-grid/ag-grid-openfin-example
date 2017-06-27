@@ -17,6 +17,11 @@ PriceChangesGrid.prototype.init = function (exchangeService,
         enableSorting: true,
         enableRangeSelection: true,
         rowSelection: 'single',
+        onGridSizeChanged: () => {
+            if(this.gridApi) {
+                this.gridApi.sizeColumnsToFit();
+            }
+        },
         columnDefs: [
             {
                 field: 'symbol',
