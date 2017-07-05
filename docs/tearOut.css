@@ -1,0 +1,15 @@
+body {
+    background-color: #333333;
+}
+
+.right-side {
+    color: white;
+}
+
+span#deltaPanelPrice {
+    font-size: 31px !important;
+}
+
+text {
+    fill: grey;
+}
