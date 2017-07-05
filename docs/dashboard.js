@@ -43,7 +43,7 @@ function createBlankTearout(name) {
         'autoShow': false,
         'opacity': 1,
         // 'url': 'about:blank',
-        'url': 'http://127.0.0.1:8080/tearOutWindow.html', //note this must be a valid url, or 'about:blank'
+        'url': 'https://ceolter.github.io/ag-grid-openfin-example/tearOutWindow.html', //note this must be a valid url, or 'about:blank'
         'frame': true,
         'resizable': false,
         'maximizable': true,
