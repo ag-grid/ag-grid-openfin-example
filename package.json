@@ -14,7 +14,8 @@
     "stocks-master": "openfin --launch --config public/app-stocks-master.json",
     "stocks-detail": "openfin --launch --config public/app-stocks-detail.json",
 
-    "trader-dashboard": "openfin --launch --config public/app-trader-dashboard.json"
+    "trader-dashboard": "openfin --launch --config public/app-trader-dashboard.json",
+    "trader-remote": "openfin --launch --config public/app-trader-remote.json"
   },
   "devDependencies": {
     "@types/openfin": "16.0.x",
@@ -22,3 +23,4 @@
     "http-server": "0.9.x"
   }
 }
+

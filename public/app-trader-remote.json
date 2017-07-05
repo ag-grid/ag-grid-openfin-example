@@ -1,0 +1,27 @@
+{
+    "devtools_port": 9090,
+    "startup_app": {
+        "name": "ag-grid-trader-dashboard",
+        "url": "https://ceolter.github.io/ag-grid-openfin-example/dashboard.html",
+        "uuid": "ag-grid-trader-dashboard",
+        "autoShow": true,
+        "defaultWidth": 1260,
+        "defaultHeight": 925,
+        "minWidth": 1260,
+        "minHeight": 925,
+        "saveWindowState": false,
+        "defaultTop": 100,
+        "defaultLeft": 100,
+        "resizable": false,
+        "frame": true,
+        "cornerRounding": {
+            "width": 5,
+            "height": 5
+        }
+    },
+    "runtime": {
+        "arguments": "",
+        "version": "beta"
+    },
+    "shortcut": {}
+}

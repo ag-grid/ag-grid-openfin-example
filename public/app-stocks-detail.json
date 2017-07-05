@@ -5,7 +5,17 @@
         "url": "http://localhost:8000/examples/stocks-detail-app/index.html",
         "uuid": "ag-grid-stocks-detail",
         "applicationIcon": "http://localhost:8090/favicon.ico",
-        "autoShow": true
+        "autoShow": true,
+        "defaultWidth": 1024,
+        "defaultHeight": 800,
+        "minWidth": 1024,
+        "minHeight": 800,
+        "saveWindowState": false,
+        "defaultCentered": true,
+        "cornerRounding": {
+            "width": 5,
+            "height": 5
+        }
     },
     "runtime": {
         "arguments": "",
