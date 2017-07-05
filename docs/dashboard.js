@@ -43,7 +43,7 @@ function createBlankTearout(name) {
         'autoShow': false,
         'opacity': 1,
         // 'url': 'about:blank',
-        'url': 'http://localhost:8000/examples/trader-dashboard/tearOutWindow.html', //note this must be a valid url, or 'about:blank'
+        'url': 'http://127.0.0.1:8080/tearOutWindow.html', //note this must be a valid url, or 'about:blank'
         'frame': true,
         'resizable': false,
         'maximizable': true,
@@ -120,9 +120,10 @@ document.addEventListener("DOMContentLoaded", function () {
         fin.desktop.main(function () {
             initTearoutListeners();
             initAppPanels();
-        })
+        });
     } catch (err) {
         alert("OpenFin is not available - you are probably running in a browser.");
+        initAppPanels();
     }
 });
 
