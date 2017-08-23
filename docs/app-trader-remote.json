@@ -2,7 +2,7 @@
     "devtools_port": 9090,
     "startup_app": {
         "name": "ag-grid-trader-dashboard",
-        "url": "https://ceolter.github.io/ag-grid-openfin-example/dashboard.html",
+        "url": "https://ag-grid.github.io/ag-grid-openfin-example/dashboard.html",
         "uuid": "ag-grid-trader-dashboard",
         "autoShow": true,
         "defaultWidth": 1260,
