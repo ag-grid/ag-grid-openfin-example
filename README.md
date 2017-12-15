@@ -10,7 +10,7 @@
 
 Then depending on the example you will need to open one or two more terminals:
 
-| Terminal 2                         |      Terminal 2             |  
+| Terminal 2                         |      Terminal 3             |  
 |------------------------------------|-----------------------------|
 | npm run simple-grid                |                             |
 | npm run rich-grid                  |                             |
