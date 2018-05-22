@@ -20,7 +20,7 @@
         }
     },
     "runtime": {
-        "arguments": "",
+        "arguments": "--winhttp-proxy-resolver",
         "version": "8.56.24.41"
     },
     "shortcut": {}
